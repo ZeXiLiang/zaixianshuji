@@ -1,0 +1,283 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>配置GitBook · 在线书籍 制作方法</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="01">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03.html" />
+    
+    
+    <link rel="prev" href="01.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    目录简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    安装Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    配置GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    GitHub展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >配置GitBook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x914D;&#x7F6E;gitbook">&#x914D;&#x7F6E;GitBook</h1>
+<blockquote>
+<ul>
+<li>1.&#x5728;&#x5F00;&#x59CB;-&#x9644;&#x4EF6;-&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;-&#x53F3;&#x952E;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x8FD0;&#x884C; &#x6253;&#x5F00;&#x8F93;&#x5165;<pre><code>npm install gitbook-cli -g</code></pre></li>
+<li>2.&#x627E;&#x4E00;&#x4E2A;&#x76D8;&#x3002; &#x6BD4;&#x5982;&#xFF1A;&#x5728;&#x6211;&#x7684;E&#x76D8;&#x4E2D; &#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x5939;-&#x91CD;&#x547D;&#x540D;&#x4E3A;&#x3010;02&#x3011;&#x6587;&#x4EF6;&#x5939; &#x3002;<ul>
+<li>1.&#x5F00;&#x59CB;-&#x9644;&#x4EF6;-&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;-&#x76F4;&#x63A5;&#x6253;&#x5F00; &#x4E0D;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x8FD0;&#x884C; &#x8FDB;&#x5165;E&#x76D8;&#x7684;02&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x3002;</li>
+<li>2.&#x547D;&#x4EE4;&#x662F;&#xFF1A;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#x8F93;&#x5165;&#x3010;e:&#x3011;&#x548C;&#x3010;cd 02&#x3011;&#x3002;&#x5982;&#x56FE;</li>
+<li>3.&#x5B89;&#x88C5;gitbook &#x8F93;&#x5165;&#x547D;&#x4EE4;
+<pre><code>gitbook init</code></pre><h1 id="&#x5982;&#x56FE;">&#x5982;&#x56FE;</h1>
+<img src="http://wp.yunxiu520.com/userfiles/01/tupian/3.jpg" alt="1"><h1 id="&#x6784;&#x5EFA;&#x76EE;&#x5F55;">&#x6784;&#x5EFA;&#x76EE;&#x5F55;</h1>
+&#x6B64;&#x65F6;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x4F1A;&#x751F;&#x6210;&#x4FE9;&#x6587;&#x4EF6;&#x3010;README.md&#x3011;&#x548C;&#x3010;SUMMARY.md&#x3011;</li>
+</ul>
+</li>
+<li>README.md: &#x4E66;&#x7684;&#x4ECB;&#x7ECD;&#x6587;&#x5B57;&#xFF0C;&#x5982;&#x524D;&#x8A00;&#x3001;&#x7B80;&#x4ECB;&#xFF0C;&#x5728;&#x7AE0;&#x8282;&#x4E2D;&#x4E5F;&#x53EF;&#x505A;&#x4E3A;&#x7AE0;&#x8282;&#x7684;&#x7B80;&#x4ECB;&#x3002;</li>
+<li>SUMMARY.md: &#x5B9A;&#x5236;&#x4E66;&#x7C4D;&#x7684;&#x7AE0;&#x8282;&#x7ED3;&#x6784;&#x548C;&#x987A;&#x5E8F;&#x3002;<ul>
+<li>&#x76EE;&#x5F55;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;<code>* [&#x663E;&#x793A;&#x7684;&#x76EE;&#x5F55;&#x540D;](&#x6587;&#x4EF6;&#x5939;/&#x6587;&#x4EF6;&#x540D;#&#x6807;&#x9898;id)</code>&#x3002;</li>
+<li>&#x4E0B;&#x4E00;&#x7EA7;&#xFF1A;<code>- [&#x663E;&#x793A;&#x7684;&#x76EE;&#x5F55;&#x540D;](&#x6587;&#x4EF6;&#x5939;/&#x6587;&#x4EF6;&#x540D;#&#x6807;&#x9898;id)</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01.html" class="navigation navigation-prev " aria-label="Previous page: 安装Node.js">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03.html" class="navigation navigation-next " aria-label="Next page: GitHub展示">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"配置GitBook","level":"1.3","depth":1,"next":{"title":"GitHub展示","level":"1.4","depth":1,"path":"03.md","ref":"03.md","articles":[]},"previous":{"title":"安装Node.js","level":"1.2","depth":1,"path":"01.md","ref":"01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"01","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"在线书籍 制作方法","language":"zh-hans","gitbook":"*","description":"月舞芸袖音画论坛和雅兰阁音画论坛携手制作"},"file":{"path":"02.md","mtime":"2019-04-20T10:41:18.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-20T10:58:20.872Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
